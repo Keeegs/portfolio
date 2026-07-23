@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keegan - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('nav ul li');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    const targetId = this.textContent.toLowerCase();
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        // Hide all sections
+                        document.querySelectorAll('main > div').forEach(section => {
+                            section.style.display = 'none';
+                        });
+                        // Show the target section
+                        targetSection.style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <nav>
+        <h1>Keegan Olsen</h1>
+        <ul>
+            <li>Home</li>
+            <li>Projects</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <main>
+        <div id="home">
+            <h1>About Me</h1>
+            <div class="info-containers">
+                <div class="about-me">
+                    <p>Hey there! I am <span class="highlight-name">Keegan</span>, an aspiring web developer. I love learning new technologies, tinkering with concepts and solving problems.</p>
+                    <p>I primarily work with <span class="highlight">HTML</span>, <span class="highlight">CSS</span>, and <span class="highlight">JavaScript</span>. I've tinkered with <span class="highlight">PHP</span>, <span class="highlight">SQL</span> and <span class="highlight">C#</span> during coursework.</p>
+                </div>
+                <div class="aside">
+                    <div class="interests">
+                        <h2>Interests</h2>
+                        <ul>
+                            <li>Web Development</li>
+                            <li>Networking</li>
+                            <li>Home Lab</li>
+                        </ul>
+                    </div>
+                    <div class="links">
+                        <h2>Links</h2>
+                        <ul>
+                            <li><a href="https://github.com/keeganolsen" target="_blank">GitHub</a></li>
+                            <li><a href="https://www.linkedin.com/in/keegan-olsen-4213822b6" target="_blank">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="projects" style="display: none;">
+            <h1>Projects</h1>
+            <div>
+                <div class="project">
+                    <h2>Reefton Art & Cake Website</h2>
+                    <p>As a part of my <span class="highlight">Diploma in Web Development</span>, I re-imagined and designed the Reefton Art & Cake website using SilverStripe. This project strengthened my skills within AWS EC2 management, custom CMS development and creating custom page templates to meet requirements.</p>
+                    <img src="images/reefton-home.png" alt="Reefton Art/Cake Website" loading="lazy">
+                </div>
+                <div class="project">
+                    <h2>Ara Virtual Tour</h2>
+                    <p>Created a <a href="https://ara-computing-tour.vercel.app" target="_blank">web-based virtual tour</a> designed to support new students in exploring the Ara Institute campus. Using 360-degree images, I developed an interactive experience that enabled students to explore key locations and learn information about available resources/services.</p>
+                    <iframe src="https://www.youtube.com/embed/XdEnl5DoCY0?si=PoTvhyO1WZuzQj72" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div id="contact" style="display: none;">
+            <h1>Contact Me</h1>
+            <div class="info-containers">
+                <div class="contact-info">
+                    <p>Thanks for stopping by! If you would like to get in touch, please reach out via email. I'd love to hear from you!</p>
+                    <ul>
+                        <li><a href="mailto:keeganolsen@icloud.com">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; - Keegan Olsen</p>
+    </footer>
+</body>
+</html>

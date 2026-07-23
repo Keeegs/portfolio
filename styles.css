@@ -1,0 +1,198 @@
+/* RESET */
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, a, article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+    
+* {
+    box-sizing: border-box;
+}
+
+nav, footer {
+    background-color: rgb(22, 22, 30);
+    color: #565F89;
+}
+
+nav {
+    padding: 1em;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav {
+    border: 1px solid rgb(65, 72, 104);
+}
+
+nav li {
+    cursor: pointer;
+}
+
+#active {
+    color: #7AA2F7;
+    background-color: #414868;
+}
+
+#home, #projects, #contact {
+    padding: 1em;   
+}
+
+h1 {
+    margin-bottom: .5em;
+}
+
+.about-me, .interests, .links, .contact-info {
+    background-color: rgb(26, 27, 38);
+    border: 1px solid rgb(65, 72, 104);
+    margin: 1em 0em;
+    padding: .5em;
+}
+
+.project {
+    background-color: rgb(26, 27, 38);
+    border: 1px solid rgb(65, 72, 104);
+    margin: 1em 0em;
+    padding: .5em;
+}
+
+.project {
+    padding: 1em;
+}
+
+.project iframe {
+    padding: 1em;
+}
+
+.project {
+    width: 100%;
+    height: 100%;
+    display: grid;
+}
+
+.project iframe {
+    width: min(100%, calc(100% * 16 / 9));
+    height: min(100%, calc(100vw * 9 / 16));
+    aspect-ratio: 16 / 9;
+    border: 0;
+}
+
+
+.highlight-name {
+    color: rgb(224, 175, 104);
+}
+
+.highlight {
+    color: rgb(122, 162, 247)
+}
+
+h2, p {
+    margin-bottom: .5em;
+}
+
+.info-containers ul {
+    padding-left: 2em;
+}
+
+a {
+    color: rgb(187, 154, 247);
+    text-decoration: none;
+}
+
+a:hover, nav li:hover {
+    text-decoration: underline;
+}
+
+body {
+    margin: 0;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+footer {
+    border: 1px solid rgb(65, 72, 104);
+    padding: 1em;
+}
+
+body {
+    background-color: rgb(26, 27, 38);
+    color: #A9B1D6;
+    font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
+}
+
+nav ul li {
+    list-style-type: none;
+    text-transform: uppercase;
+}
+
+img {
+    width: 100%;
+}
+
+@media screen and (min-width: 45em) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 1fr 3em;
+    }
+    
+    main {
+        display: flex;
+    }
+
+    nav {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+    }
+
+    footer {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+    }
+
+    nav ul {
+        display: block;
+    }
+
+    nav li {
+        padding: .25em;
+    }
+}
+
+@media screen and (min-width: 60em) {
+    .aside {
+        display: flex;
+    }
+
+    .aside > div {
+        flex: 1;
+    }
+
+    .interests {
+        margin-right: 1em;
+    }
+
+    .links {
+        margin-left: 1em;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    nav li {
+        font-size: 1.25rem;
+    }
+}
